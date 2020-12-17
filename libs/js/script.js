@@ -5,20 +5,18 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: $('#selCountry').val(),
-				lang: $('#selLanguage').val()
+				latitude: $('#selCountry').val(),
+				longitude: $('#selLanguage').val()
 			},
 			success: function(result) {
 
 				console.log(result);
 
 				if (result.status.name == "ok") {
-
-					$('#txtContinent').html(result['data'][0]['countryName']);
-					$('#txtCapital').html(result['data'][0]['currencyCode']);
-					$('#txtLanguages').html(result['data'][0]['languages']);
-					$('#txtPopulation').html(result['data'][0]['isoAlpha3']);
-					$('#txtArea').html(result['data'][0]['isoNumeric']);
+					$('#txtCode').html(result['data'][0]['countryCode']);
+					$('#txtCountryName').html(result['data'][0]['countryName']);
+					$('#txtMinPostalCode').html(result['data'][0]['minPostalCode']);
+					$('#txtMaxPostalCode').html(result['data'][0]['maxPostalCode']);
 
 				}
 			
