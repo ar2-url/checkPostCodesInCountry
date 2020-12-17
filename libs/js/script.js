@@ -5,6 +5,7 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
+		//I ve changed here for latitude and longitude
 				latitude: $('#selCountry').val(),
 				longitude: $('#selLanguage').val()
 			},
